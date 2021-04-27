@@ -64,7 +64,7 @@ function App() {
         {planets.map((planet) => {
           return (
             <div key={planet.name} className="col-md-6  col-lg-4 col-xl-3 mb-4">
-              <article className="bg-warning p-3">
+              <article className="bg-warning p-3 text-dark">
                 <h2 className="h5">{planet.name}</h2>
                 <p className="mb-0">
                   <b>population</b> <br /> {planet.population}
@@ -81,7 +81,7 @@ function App() {
       {!loading && hasNext && (
         <button
           type="button"
-          className="btn btn-dark"
+          className={!darkMode ? "btn btn-dark" : "btn btn-light"}
           onClick={handleButtonClick}
           disabled={loading}
         >
